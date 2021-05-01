@@ -1,0 +1,26 @@
+html, body{
+    background-color: black;
+}
+
+.logIn{
+    background-color: darkgray;
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    height:100px;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#logIn{
+    color: white;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logIn:hover{
+    color: gray;
+    font-weight: bold;
+}
