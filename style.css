@@ -1,11 +1,44 @@
-html, body{
-    background-color: black;
+html{
+    box-sizing: border-box;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
-.logIn{
-    background-color: darkgray;
-    position: relative;
+body{
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    background-color: #f5f6f7;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #292b2c;
+    margin: 0px;
+    height: 100%;
+}
+
+.page{
+    height: 200vh;
     display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    overflow-x: hidden;
+}
+.logIn{
+    background-color: #000;
+    position: relative;
+    display: inline-flex;
     top: 0;
     left: 0;
     height:100px;
@@ -16,11 +49,27 @@ html, body{
 
 #logIn{
     color: white;
+    background-color: #000;
     font-size: large;
+    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    padding-top: 0px;
+    padding-right: 40px;
+    padding-bottom: 0px;
+    padding-left: 0px;
 }
 
 #logIn:hover{
-    color: gray;
+    color: lightgray;
     font-weight: bold;
+    padding-top: 0px;
+    padding-right: 40px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.banner--fadein{
+    opacity: 1;
+    visibility: visible;
 }
