@@ -1,6 +1,7 @@
 html{
     box-sizing: border-box;
     height: 100%;
+/*    -webkit-text-size-adjust: 100%; */
 }
 
 body{
@@ -12,6 +13,7 @@ body{
     line-height: 1.5;
     color: #292b2c;
     height: 100%;
+/*    box-sizing: inherit;   */
 }
 
 .page{
@@ -28,22 +30,25 @@ body{
 .banner--fadein{
     opacity: 1;
     visibility: visible;
+    cursor: pointer;
 }
 
 .banner{
     left: 0;
     right: 0;
     z-index: 40;
+    cursor: pointer;
     text-transform: uppercase;
     background-color: transparent;
     transition: background-color .2s ease-in, opacity .2s ease-in;
 }
 
 #logIn{
+    position:relative;
     display: flex;
     visibility: visible;
     color: white;
-    background-color: #000;
+    background-color: transparent;
     font-size: large;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -64,54 +69,35 @@ body{
 }
 
 .logIn{
-    background-color: #000;
+    background-image: linear-gradient(0deg, transparent 40%, rgb(0, 0, 0) 95%, rgb(0, 0, 0) 100%); 
     position: relative;
-    display: inline-flex;
+    display: flex;
     top: 0;
     left: 0;
     height:100px;
     width: 100%;
     justify-content: flex-end;
     align-items: center;
+    opacity: 1;
 }
 
 .topHalf{
-    background-image: linear-gradient(135deg, #231437 0%, #2c385e 50%,#336e6b 100%);
+    background-image: url(https://www.hulu.com/static/hitch/s3/attachments/ckbvd0eoj02mz19mjjwd51mmx-homepage-masthead-test-tablet-1536x1320-v4c-6-16-20.jpg);
     display: flex;
     flex-direction: column;
+    justify-content:inherit;
     align-items: center;
-    background-position:center top;
-    background-size: cover;
+    background-position: center;
+    background-size:cover ;
     text-align: center;
     overflow: hidden;
-    position: relative;
-    padding-top: 72px;
-    min-height: 660px;
-    z-index: -1
+    position: inherit;
+    padding-top: 0;
+    min-height: 800px;
+    z-index: 1;
 }
 
-.graphic_container{
-    box-sizing: inherit;
-    text-align: center;
-}
-
-.showsGraphic{
-    height: 100%;
-}
-
-.graphicBackground{
-    background-image: linear-gradient(0deg, transparent 60%, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 0.4) 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-position: center top;
-    background-size: cover;
-    box-sizing: inherit;
-}
-
-.oveaphic{
+.overGraphic{
     position: relative;
     display: flex;
     flex-grow: 1;
@@ -133,6 +119,7 @@ body{
     text-transform: uppercase;
     font-weight: 600;
     padding-bottom: 7px;
+    width: 100%;
 }
 
 .oneMonthFree_text{
@@ -142,15 +129,7 @@ body{
     letter-spacing: 0.5px;
     line-height: 13px;
     padding-bottom: 8px;
-}
-
-img{
-    vertical-align: middle;
-    border-top: none;
-    border-right: none;
-    border-bottom: none;
-    border-left: none;
-}
+} 
 
 .watchThousands{
     font-weight: 600;
@@ -161,28 +140,15 @@ img{
 
 .freeTrial{
     margin-top: 1.6em;
+    width: 100%;
 }
 
 .freeTrial_input{
     transform: translateY(0);
-    transition-property: none;
-    transition-duration: 0.2s, 0.1s;
-    transition-timing-function: ease, ease;
-    transition-delay: 0s, 0s;
-    text-transform: uppercase;
-    white-space: nowrap;
     border-radius: 4px;
     cursor: pointer;
     color: #040505;
-    background-image: initial;
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: rgb(255,255,255);
+    background: #fff;
     height: 46px;
     min-width: 136px;
     padding: 0 32px;
@@ -205,6 +171,17 @@ img{
     font-size: 10px;
     font-weight: normal;
     line-height: 16px;
+}
+
+.graphicBackground{
+    background-image: linear-gradient(0deg, transparent 60%, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 0.4) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center top;
+    background-size: cover;
     box-sizing: inherit;
 }
 
@@ -213,21 +190,19 @@ img{
     padding: 28px 10px 28px 20x;
     z-index: 1;
     width: 100%;
+}
+
+.row{
     align-items: center;
     margin: 0 auto;
     width: 100%;
     max-width: 1520px;
-}
-
-.row{
     display: flex;
     flex-wrap: wrap;
-    -webkit-box-pack: center;
-    justify-content: center;
 }
 
 .huDisES{
-    display: block;
+    display:none;
     padding: 0;
 }
 
